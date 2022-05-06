@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 interface Repo {
   id: Number;
@@ -6,5 +7,6 @@ interface Repo {
 
 @Injectable()
 export class GithubService {
-  constructor() {}
+  repos: Array<Repo> = [];
+  constructor(private http: HttpClient) {}
 }
