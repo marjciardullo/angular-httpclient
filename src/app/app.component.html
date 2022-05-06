@@ -1,5 +1,15 @@
-<h1></h1>
-<h2>Github Marjorye</h2>
+<h1>HttpClient TP</h1>
+<p>Nome: Marjorye Ciardullo</p>
+<p>RA: 0050832011024</p>
+
+<h2>BitCoins</h2>
+
+<table border="1">
+  <tr *ngFor="let bitcoin of bitcoinService.list">
+    <td>{{ bitcoin.time.updated }}</td>
+  </tr>
+</table>
+<br />
 
 <table border="1">
   <tr>
@@ -12,12 +22,3 @@
   </tr>
 </table>
 <hr />
-<h2>BitCoins</h2>
-<button>Atualizar</button>
-<table border="1">
-  <tr>
-    <th>Data/Hora</th>
-    <th>USD</th>
-    <th>EUR</th>
-  </tr>
-</table>
