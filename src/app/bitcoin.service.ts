@@ -27,7 +27,6 @@ export class BitcoinService {
       .subscribe((data) => {
         this.current = data;
         this.list.push(data);
-        console.log(this.list);
       });
   }
 }
