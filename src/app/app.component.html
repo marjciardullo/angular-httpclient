@@ -5,8 +5,14 @@
 <h2>BitCoins</h2>
 
 <table border="1">
-  <tr *ngFor="let bitcoin of bitcoinService.list">
-    <td>{{ bitcoin.time.updated }}</td>
+  <tr>
+    <th>USD</th>
+    <th>BRL</th>
+  </tr>
+  <tr *ngFor="let rates of bitcoinService.list">
+    <td>{{ rates }}</td>
+    <td></td>
+    <td></td>
   </tr>
 </table>
 <br />
