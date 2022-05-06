@@ -1,4 +1,5 @@
 import { Component, VERSION } from '@angular/core';
+import { GithubService } from './github.service';
 
 @Component({
   selector: 'my-app',
@@ -7,4 +8,6 @@ import { Component, VERSION } from '@angular/core';
 })
 export class AppComponent {
   name = 'HttpClient';
+
+  constructor(public githubService: GithubService) {}
 }
