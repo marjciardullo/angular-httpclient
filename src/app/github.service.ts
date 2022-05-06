@@ -9,4 +9,12 @@ interface Repo {
 export class GithubService {
   repos: Array<Repo> = [];
   constructor(private http: HttpClient) {}
+
+  update() {
+    this.http
+      .get<Array<Repo>>('https://api.github.com/users/marjciardullo/repos')
+      .subscribe((data) => {
+        this.repos = data;
+      });
+  }
 }
