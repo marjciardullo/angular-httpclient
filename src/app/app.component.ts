@@ -1,6 +1,7 @@
 import { Component, VERSION } from '@angular/core';
 import { BitcoinService } from './bitcoin.service';
 import { GithubService } from './github.service';
+import { TemporizadorService } from './temporizador.service';
 
 @Component({
   selector: 'my-app',
@@ -12,12 +13,14 @@ export class AppComponent {
 
   constructor(
     public githubService: GithubService,
-    public bitcoinService: BitcoinService
+    public bitcoinService: BitcoinService,
+    public temporizador: TemporizadorService
   ) {}
 
   ngOnInit() {
     this.githubService.update();
     this.bitcoinService.update();
+    this.temporizador.temporizador();
   }
 
   updateBitcoinRates() {
