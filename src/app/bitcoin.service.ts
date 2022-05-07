@@ -26,7 +26,20 @@ export class BitcoinService {
       .get<Response>('https://api.coindesk.com/v1/bpi/currentprice/BRL.json')
       .subscribe((data) => {
         this.current = data;
-        this.list.push(data);
+        if (this.list.length == 0) {
+          this.list.push(data);
+        }
+
+        let current_usd = this.current.bpi.USD.rate_float;
+        let current_brl = this.current.bpi.BRL.rate_float;
+        let last_rate = this.list[this.list.length - 1];
+
+        if (
+          current_brl !== last_rate.bpi.BRL.rate_float ||
+          current_usd !== last_rate.bpi.USD.rate_float
+        ) {
+          this.list.push(data);
+        }
       });
   }
 }
