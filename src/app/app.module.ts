@@ -7,11 +7,12 @@ import { HelloComponent } from './hello.component';
 import { GithubService } from './github.service';
 import { HttpClientModule } from '@angular/common/http';
 import { BitcoinService } from './bitcoin.service';
+import { TemporizadorService } from './temporizador.service';
 
 @NgModule({
   imports: [BrowserModule, FormsModule, HttpClientModule],
   declarations: [AppComponent, HelloComponent],
   bootstrap: [AppComponent],
-  providers: [GithubService, BitcoinService],
+  providers: [GithubService, BitcoinService, TemporizadorService],
 })
 export class AppModule {}

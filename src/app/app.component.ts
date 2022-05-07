@@ -17,6 +17,7 @@ export class AppComponent {
 
   ngOnInit() {
     this.githubService.update();
+    this.bitcoinService.update();
   }
 
   updateBitcoinRates() {
