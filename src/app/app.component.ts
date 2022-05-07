@@ -20,7 +20,7 @@ export class AppComponent {
   ngOnInit() {
     this.githubService.update();
     this.bitcoinService.update();
-    this.temporizador.temporizador();
+    //this.temporizador.temporizador();
   }
 
   updateBitcoinRates() {
